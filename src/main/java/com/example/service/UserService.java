@@ -6,6 +6,7 @@ import com.example.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 
 
 public interface UserService {
@@ -13,5 +14,5 @@ public interface UserService {
         boolean saveUser(User user);
         boolean deleteUser(Integer id);
         boolean updateUser(User user);
-
+        User selectById(Integer id);
 }

@@ -1,11 +1,14 @@
 package com.example.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.dao.UserDao;
 import com.example.domain.User;
 import com.example.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class UserServiceimpl implements UserService {
@@ -34,6 +37,12 @@ public class UserServiceimpl implements UserService {
     public boolean updateUser(User user) {
         int i = userDao.updateById(user);
         return i>0;
+    }
+
+    @Override
+    public User selectById(Integer id) {
+        User user = userDao.selectById(id);
+        return user;
     }
 
 

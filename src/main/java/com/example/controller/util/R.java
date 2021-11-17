@@ -19,4 +19,7 @@ public class R {
     public R(boolean flag){
         this.flag = flag;
     }
+    public R(){
+
+    }
 }

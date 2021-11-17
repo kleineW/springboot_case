@@ -36,6 +36,11 @@ public class UserController {
         boolean b = userService.deleteUser(id);
         return new R(b);
     }
+    @GetMapping("/{id}")
+    public R selectById(@PathVariable Integer id){
+        User user = userService.selectById(id);
+        return new R(true,user);
+    }
 
 
 }
